@@ -1,0 +1,154 @@
+#: import utils kivy.utils
+<CalculatorWidget>
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        pos_hint:{"center_x": .5}
+
+
+        TextInput:
+            id: calc_input
+            text: "0"
+            halign: "right"
+            size_hint: 1., .15
+            font_size: 50
+
+        GridLayout:
+            cols:4
+            rows:5
+
+            # Row 0
+            Button:
+                text: "%"
+                font_size: 20
+                size_hint: (.2, .2)
+            Button:
+                id: clear_btn
+                text: "C"
+                font_size: 20
+                size_hint: (.2, .2)
+                on_release: root.clear()
+
+            Button:
+                text: "<<"
+                font_size: 20
+                size_hint: (.2, .2)
+                on_release: root.remove_last()
+
+            Button:
+                text: "/"
+                font_size: 20
+                size_hint: (.2, .2)
+                on_release: root.operator("/")
+
+            # Row 1
+            Button:
+                text: "7"
+                font_size: 20
+                size_hint: (.2, .2)
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_release: root.value(7)
+
+            Button:
+                text: "8"
+                font_size: 20
+                size_hint: (.2, .2)
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_release: root.value(8)
+
+            Button:
+                text: "9"
+                font_size: 20
+                size_hint: (.2, .2)
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_release: root.value(9)
+
+            Button:
+                text: "X"
+                font_size: 20
+                size_hint: (.2, .2)
+                on_release: root.operator("*")
+
+            # Row 2
+            Button:
+                text: "4"
+                font_size: 20
+                size_hint: (.2, .2)
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_release: root.value(4)
+
+            Button:
+                text: "5"
+                font_size: 20
+                size_hint: (.2, .2)
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_release: root.value(5)
+
+            Button:
+                text: "6"
+                font_size: 20
+                size_hint: (.2, .2)
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_release: root.value(6)
+
+            Button:
+                text: "-"
+                font_size: 20
+                size_hint: (.2, .2)
+                on_release: root.operator("-")
+
+            # Row 3
+            Button:
+                text: "1"
+                font_size: 20
+                size_hint: (.2, .2)
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_release: root.value(1)
+
+            Button:
+                text: "2"
+                font_size: 20
+                size_hint: (.2, .2)
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_release: root.value(2)
+
+            Button:
+                text: "3"
+                font_size: 20
+                size_hint: (.2, .2)
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_release: root.value(3)
+
+            Button:
+                text: "+"
+                font_size: 20
+                size_hint: (.2, .2)
+                on_release: root.operator("+")
+
+            # Row 4
+            Button:
+                text: "+/-"
+                font_size: 20
+                size_hint: (.2, .2)
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_release: root.pos_or_negative()
+
+            Button:
+                text: "0"
+                font_size: 20
+                size_hint: (.2, .2)
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_release: root.value(0)
+
+            Button:
+                text: "."
+                font_size: 20
+                size_hint: (.2, .2)
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_release: root.dot()
+
+            Button:
+                text: "="
+                font_size: 20
+                size_hint: (.2, .2)
+                on_release: root.math()
