@@ -1,5 +1,5 @@
 """
-    Author : Yossep
+    Author : Yossepbb
     Date: 18/08/2022
     Description: Simple calculator application made with Python
     Licence : GNU V2. You are free to copy that code and modify it.
