@@ -8,7 +8,6 @@
     python 3.9.1
 
 """
-
 import kivy
 
 kivy.require("2.1.0")
